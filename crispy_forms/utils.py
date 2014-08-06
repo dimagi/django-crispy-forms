@@ -15,7 +15,9 @@ from .compatibility import text_type, PY2
 
 # Global field template, default template used for rendering a field.
 
-TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
+# overriding this here, since we can't override CRISPY_TEMPLATE_PACK in settings
+# on a per-request basis due to the way crispy forms is setup.
+TEMPLATE_PACK = 'bootstrap3'
 
 
 # By memoizeing we avoid loading the template every time render_field
