@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from crispy_forms.compatibility import integer_types, string_types
-from crispy_forms.exceptions import DynamicError
-from crispy_forms.layout import Fieldset, MultiField
-from crispy_forms.bootstrap import Container
+from .compatibility import integer_types, string_types
+from .exceptions import DynamicError
+from .layout import Fieldset, MultiField
+from .bootstrap import Container
 
 
 class LayoutSlice(object):

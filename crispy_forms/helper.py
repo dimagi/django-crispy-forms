@@ -4,11 +4,11 @@ import re
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.utils.safestring import mark_safe
 
-from crispy_forms.compatibility import string_types
-from crispy_forms.layout import Layout
-from crispy_forms.layout_slice import LayoutSlice
-from crispy_forms.utils import render_field, flatatt, TEMPLATE_PACK
-from crispy_forms.exceptions import FormHelpersException
+from .compatibility import string_types
+from .layout import Layout
+from .layout_slice import LayoutSlice
+from .utils import render_field, flatatt, TEMPLATE_PACK
+from .exceptions import FormHelpersException
 
 
 class DynamicLayoutHandler(object):
@@ -160,8 +160,8 @@ class FormHelper(DynamicLayoutHandler):
     Best way to add a helper to a form is adding a property named helper to the form
     that returns customized `FormHelper` object::
 
-        from crispy_forms.helper import FormHelper
-        from crispy_forms.layout import Submit
+        from .helper import FormHelper
+        from .layout import Submit
 
         class MyForm(forms.Form):
             title = forms.CharField(_("Title"))

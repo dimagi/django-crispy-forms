@@ -5,8 +5,8 @@ from django.template import Context, Template
 from django.template.loader import render_to_string
 from django.utils.html import conditional_escape
 
-from crispy_forms.compatibility import string_types, text_type
-from crispy_forms.utils import render_field, flatatt
+from .compatibility import string_types, text_type
+from .utils import render_field, flatatt
 
 TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
 

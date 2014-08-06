@@ -8,8 +8,8 @@ from django.utils.functional import memoize
 from django.utils.safestring import mark_safe
 from django import template
 
-from crispy_forms.exceptions import CrispyError
-from crispy_forms.utils import flatatt
+from ..exceptions import CrispyError
+from ..utils import flatatt
 
 TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
 DEBUG = getattr(settings, 'DEBUG', False)

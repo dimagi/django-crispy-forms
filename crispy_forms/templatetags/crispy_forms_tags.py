@@ -8,11 +8,11 @@ from django.template.loader import get_template
 from django.utils.functional import memoize
 from django import template
 
-from crispy_forms.helper import FormHelper
+from ..helper import FormHelper
 
 register = template.Library()
 # We import the filters, so they are available when doing load crispy_forms_tags
-from crispy_forms.templatetags.crispy_forms_filters import *
+from ..templatetags.crispy_forms_filters import *
 
 TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
 ALLOWED_TEMPLATE_PACKS = getattr(settings, 'CRISPY_ALLOWED_TEMPLATE_PACKS', ('bootstrap', 'uni_form'))
@@ -222,9 +222,9 @@ class CrispyFormNode(BasicNode):
 def do_uni_form(parser, token):
     """
     You need to pass in at least the form/formset object, and can also pass in the
-    optional `crispy_forms.helpers.FormHelper` object.
+    optional `.helpers.FormHelper` object.
 
-    helper (optional): A `crispy_forms.helper.FormHelper` object.
+    helper (optional): A `.helper.FormHelper` object.
 
     Usage::
 

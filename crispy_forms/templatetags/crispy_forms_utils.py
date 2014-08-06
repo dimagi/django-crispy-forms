@@ -9,7 +9,7 @@ except ImportError:
     from django.utils.encoding import force_text
 from django.utils.functional import allow_lazy
 
-from crispy_forms.compatibility import text_type
+from ..compatibility import text_type
 
 register = template.Library()
 TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')

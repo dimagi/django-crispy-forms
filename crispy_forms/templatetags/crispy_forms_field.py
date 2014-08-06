@@ -8,7 +8,7 @@ from django import template
 from django.template import loader, Context
 from django.conf import settings
 
-from crispy_forms.utils import TEMPLATE_PACK
+from ..utils import TEMPLATE_PACK
 
 register = template.Library()
 
