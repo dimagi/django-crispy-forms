@@ -24,7 +24,7 @@ from crispy_forms.layout import (
     Layout, Submit, Reset, Hidden, Button, MultiField,
 )
 from crispy_forms.utils import render_crispy_form
-from crispy_forms.templatetags.crispy_forms_tags import CrispyFormNode
+from crispy_forms.templatetags.crispy_forms_tags_b3 import CrispyFormNode
 
 
 class TestFormHelper(CrispyTestCase):

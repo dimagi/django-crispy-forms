@@ -159,7 +159,7 @@ def render_crispy_form(form, helper=None, context=None):
 
     This function wraps the template logic in a function easy to use in a Django view.
     """
-    from .templatetags.crispy_forms_tags import CrispyFormNode
+    from .templatetags.crispy_forms_tags_b3 import CrispyFormNode
 
     if helper is not None:
         node = CrispyFormNode('form', 'helper')

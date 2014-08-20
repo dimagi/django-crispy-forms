@@ -6,7 +6,7 @@ from django.template import loader, Context
 
 from .base import CrispyTestCase
 from .forms import TestForm
-from crispy_forms.templatetags.crispy_forms_field import crispy_addon
+from crispy_forms.templatetags.crispy_forms_field_b3 import crispy_addon
 
 
 

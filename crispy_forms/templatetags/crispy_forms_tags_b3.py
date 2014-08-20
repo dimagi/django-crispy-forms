@@ -12,7 +12,7 @@ from ..helper import FormHelper
 
 register = template.Library()
 # We import the filters, so they are available when doing load crispy_forms_tags
-from ..templatetags.crispy_forms_filters import *
+from ..templatetags.crispy_forms_filters_b3 import *
 
 TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
 ALLOWED_TEMPLATE_PACKS = getattr(settings, 'CRISPY_ALLOWED_TEMPLATE_PACKS', ('bootstrap', 'uni_form'))

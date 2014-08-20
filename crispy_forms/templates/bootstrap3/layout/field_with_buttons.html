@@ -1,4 +1,4 @@
-{% load crispy_forms_field %}
+{% load crispy_forms_field_b3 %}
 
 <div{% if div.css_id %} id="{{ div.css_id }}"{% endif %} class="form-group{% if form_show_errors and field.errors %} has-error{% endif %}{% if field.css_classes %} {{ field.css_classes }}{% endif %}{% if div.css_class %} {{ div.css_class }}{% endif %}" {{ div.flat_attrs|safe }}>
     {% if field.label and form_show_labels %}
