@@ -14,21 +14,21 @@ from django.utils.translation import ugettext_lazy as _
 
 from .base import CrispyTestCase
 from .forms import TestForm
-from crispy_forms.bootstrap import (
+from bootstrap3_crispy.bootstrap import (
     FieldWithButtons, PrependedAppendedText, AppendedText, PrependedText,
     StrictButton
 )
-from crispy_forms.compatibility import text_type
-from crispy_forms.helper import FormHelper, FormHelpersException
-from crispy_forms.layout import (
+from bootstrap3_crispy.compatibility import text_type
+from bootstrap3_crispy.helper import FormHelper, FormHelpersException
+from bootstrap3_crispy.layout import (
     Layout, Submit, Reset, Hidden, Button, MultiField,
 )
-from crispy_forms.utils import render_crispy_form
-from crispy_forms.templatetags.crispy_forms_tags_b3 import CrispyFormNode
+from bootstrap3_crispy.utils import render_crispy_form
+from bootstrap3_crispy.templatetags.crispy_forms_tags_b3 import CrispyFormNode
 
 
 class TestFormHelper(CrispyTestCase):
-    urls = 'crispy_forms.tests.urls'
+    urls = 'bootstrap3_crispy.tests.urls'
 
     def test_inputs(self):
         form_helper = FormHelper()
@@ -411,7 +411,7 @@ class TestFormHelper(CrispyTestCase):
 
 
 class TestBootstrapFormHelper(CrispyTestCase):
-    urls = 'crispy_forms.tests.urls'
+    urls = 'bootstrap3_crispy.tests.urls'
 
     def test_form_show_errors(self):
         form = TestForm({

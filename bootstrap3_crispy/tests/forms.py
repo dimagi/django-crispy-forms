@@ -1,7 +1,7 @@
 from django import forms
 from django.db import models
 
-from crispy_forms.helper import FormHelper
+from bootstrap3_crispy.helper import FormHelper
 
 
 class TestForm(forms.Form):

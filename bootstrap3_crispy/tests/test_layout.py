@@ -18,18 +18,18 @@ from .forms import (
     TestForm4, CrispyTestModel, TestForm5
 )
 from .utils import override_settings
-from crispy_forms.bootstrap import InlineCheckboxes
-from crispy_forms.compatibility import PY2
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import (
+from bootstrap3_crispy.bootstrap import InlineCheckboxes
+from bootstrap3_crispy.compatibility import PY2
+from bootstrap3_crispy.helper import FormHelper
+from bootstrap3_crispy.layout import (
     Layout, Fieldset, MultiField, Row, Column, HTML, ButtonHolder,
     Div, Submit
 )
-from crispy_forms.utils import render_crispy_form
+from bootstrap3_crispy.utils import render_crispy_form
 
 
 class TestFormLayout(CrispyTestCase):
-    urls = 'crispy_forms.tests.urls'
+    urls = 'bootstrap3_crispy.tests.urls'
 
     def test_invalid_unicode_characters(self):
         # Adds a BooleanField that uses non valid unicode characters "ñ"
@@ -509,7 +509,7 @@ class TestFormLayout(CrispyTestCase):
 
 
 class TestBootstrapFormLayout(CrispyTestCase):
-    urls = 'crispy_forms.tests.urls'
+    urls = 'bootstrap3_crispy.tests.urls'
 
     def test_keepcontext_context_manager(self):
         # Test case for issue #180
@@ -535,7 +535,7 @@ class TestBootstrapFormLayout(CrispyTestCase):
 
 
 class TestBootstrap3FormLayout(CrispyTestCase):
-    urls = 'crispy_forms.tests.urls'
+    urls = 'bootstrap3_crispy.tests.urls'
 
     def test_form_inline(self):
         form = TestForm()

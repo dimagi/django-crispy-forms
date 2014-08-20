@@ -16,14 +16,14 @@ settings.CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 def runtests():
     return DjangoTestSuiteRunner(failfast=False).run_tests([
-        'crispy_forms.TestBasicFunctionalityTags',
-        'crispy_forms.TestFormHelper',
-        'crispy_forms.TestBootstrapFormHelper',
-        'crispy_forms.TestFormLayout',
-        'crispy_forms.TestBootstrapFormLayout',
-        'crispy_forms.TestLayoutObjects',
-        'crispy_forms.TestBootstrapLayoutObjects',
-        'crispy_forms.TestDynamicLayouts'
+        'bootstrap3_crispy.TestBasicFunctionalityTags',
+        'bootstrap3_crispy.TestFormHelper',
+        'bootstrap3_crispy.TestBootstrapFormHelper',
+        'bootstrap3_crispy.TestFormLayout',
+        'bootstrap3_crispy.TestBootstrapFormLayout',
+        'bootstrap3_crispy.TestLayoutObjects',
+        'bootstrap3_crispy.TestBootstrapLayoutObjects',
+        'bootstrap3_crispy.TestDynamicLayouts'
     ], verbosity=1, interactive=True)
 
 

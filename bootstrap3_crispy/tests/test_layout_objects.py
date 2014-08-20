@@ -8,16 +8,16 @@ from django.utils.translation import activate, deactivate
 
 from .base import CrispyTestCase
 from .forms import CheckboxesTestForm, TestForm
-from crispy_forms.bootstrap import (
+from bootstrap3_crispy.bootstrap import (
     PrependedAppendedText, AppendedText, PrependedText, InlineRadios,
     Tab, TabHolder, AccordionGroup, Accordion, Alert, InlineCheckboxes,
     FieldWithButtons, StrictButton
 )
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import (
+from bootstrap3_crispy.helper import FormHelper
+from bootstrap3_crispy.layout import (
     Layout, HTML, Field, MultiWidgetField
 )
-from crispy_forms.utils import render_crispy_form
+from bootstrap3_crispy.utils import render_crispy_form
 
 
 class TestLayoutObjects(CrispyTestCase):

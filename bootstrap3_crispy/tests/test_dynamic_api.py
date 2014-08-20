@@ -2,15 +2,15 @@
 from django import forms
 
 from .base import CrispyTestCase
-from crispy_forms.compatibility import string_types
-from crispy_forms.exceptions import DynamicError
-from crispy_forms.helper import FormHelper, FormHelpersException
-from crispy_forms.layout import Submit
-from crispy_forms.layout import (
+from bootstrap3_crispy.compatibility import string_types
+from bootstrap3_crispy.exceptions import DynamicError
+from bootstrap3_crispy.helper import FormHelper, FormHelpersException
+from bootstrap3_crispy.layout import Submit
+from bootstrap3_crispy.layout import (
     Layout, Fieldset, MultiField, HTML, Div, Field
 )
-from crispy_forms.bootstrap import AppendedText
-from crispy_forms.tests.forms import TestForm
+from bootstrap3_crispy.bootstrap import AppendedText
+from bootstrap3_crispy.tests.forms import TestForm
 
 
 class TestDynamicLayouts(CrispyTestCase):

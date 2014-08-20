@@ -5,7 +5,7 @@ from django.conf import settings
 from django.template import loader
 from django.test import TestCase
 
-from crispy_forms.tests.utils import override_settings
+from bootstrap3_crispy.tests.utils import override_settings
 
 
 class CrispyTestCase(TestCase):

@@ -1,6 +1,6 @@
 import os
 
-from crispy_forms.compatibility import text_type
+from bootstrap3_crispy.compatibility import text_type
 
 
 BASE_DIR = os.path.dirname(__file__)
