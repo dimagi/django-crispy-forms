@@ -12,7 +12,7 @@ from django.utils.functional import allow_lazy
 from ..compatibility import text_type
 
 register = template.Library()
-TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
+TEMPLATE_PACK = 'bootstrap3'
 
 
 def selectively_remove_spaces_between_tags(value, template_pack, form_class):

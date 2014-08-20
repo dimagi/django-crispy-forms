@@ -11,7 +11,7 @@ from django import template
 from ..exceptions import CrispyError
 from ..utils import flatatt
 
-TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
+TEMPLATE_PACK = 'bootstrap3'
 DEBUG = getattr(settings, 'DEBUG', False)
 
 

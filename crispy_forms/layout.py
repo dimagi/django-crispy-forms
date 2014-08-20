@@ -8,7 +8,7 @@ from django.utils.html import conditional_escape
 from .compatibility import string_types, text_type
 from .utils import render_field, flatatt
 
-TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
+TEMPLATE_PACK = 'bootstrap3'
 
 
 class LayoutObject(object):

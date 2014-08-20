@@ -8,13 +8,13 @@ from django.template.loader import get_template
 from django.utils.functional import memoize
 from django import template
 
-from ..helper import FormHelper
+from bootstrap3_crispy.crispy_forms.helper import FormHelper
 
 register = template.Library()
 # We import the filters, so they are available when doing load crispy_forms_tags
 from ..templatetags.crispy_forms_filters_b3 import *
 
-TEMPLATE_PACK = getattr(settings, 'CRISPY_TEMPLATE_PACK', 'bootstrap')
+TEMPLATE_PACK = 'bootstrap3'
 ALLOWED_TEMPLATE_PACKS = getattr(settings, 'CRISPY_ALLOWED_TEMPLATE_PACKS', ('bootstrap', 'uni_form'))
 
 
@@ -218,7 +218,7 @@ class CrispyFormNode(BasicNode):
 
 
 # {% crispy %} tag
-@register.tag(name="crispy")
+@register.tag(name="crispy_b3")
 def do_uni_form(parser, token):
     """
     You need to pass in at least the form/formset object, and can also pass in the
