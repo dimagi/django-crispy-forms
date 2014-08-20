@@ -14,7 +14,7 @@ register = template.Library()
 # We import the filters, so they are available when doing load crispy_forms_tags
 from ..templatetags.crispy_forms_filters_b3 import *
 
-TEMPLATE_PACK = 'bootstrap3'
+TEMPLATE_PACK = 'bootstrap3_transitional'
 ALLOWED_TEMPLATE_PACKS = getattr(settings, 'CRISPY_ALLOWED_TEMPLATE_PACKS', ('bootstrap', 'uni_form'))
 
 

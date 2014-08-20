@@ -451,7 +451,7 @@ class TestBootstrapFormHelper(CrispyTestCase):
         html = render_crispy_form(form)
 
         help_class = 'help-inline'
-        if self.current_template_pack == 'bootstrap3':
+        if self.current_template_pack == 'bootstrap3_transitional':
             help_class = 'help-block'
 
         matches = re.findall(

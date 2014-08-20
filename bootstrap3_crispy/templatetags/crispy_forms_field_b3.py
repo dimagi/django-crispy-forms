@@ -106,7 +106,7 @@ class CrispyFieldNode(template.Node):
                 css_class = class_name
 
             if (
-                TEMPLATE_PACK == 'bootstrap3'
+                TEMPLATE_PACK == 'bootstrap3_transitional'
                 and not is_checkbox(field)
                 and not is_file(field)
             ):

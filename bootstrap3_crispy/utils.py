@@ -17,7 +17,7 @@ from .compatibility import text_type, PY2
 
 # overriding this here, since we can't override CRISPY_TEMPLATE_PACK in settings
 # on a per-request basis due to the way crispy forms is setup.
-TEMPLATE_PACK = 'bootstrap3'
+TEMPLATE_PACK = 'bootstrap3_transitional'
 
 
 # By memoizeing we avoid loading the template every time render_field

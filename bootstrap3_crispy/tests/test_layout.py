@@ -530,7 +530,7 @@ class TestBootstrapFormLayout(CrispyTestCase):
 
         if self.current_template_pack == 'bootstrap':
             self.assertEqual(response.content.count(b'checkbox inline'), 3)
-        elif self.current_template_pack == 'bootstrap3':
+        elif self.current_template_pack == 'bootstrap3_transitional':
             self.assertEqual(response.content.count(b'checkbox-inline'), 3)
 
 
@@ -541,7 +541,7 @@ class TestBootstrap3FormLayout(CrispyTestCase):
         form = TestForm()
         form.helper = FormHelper()
         form.helper.form_class = 'form-inline'
-        form.helper.field_template = 'bootstrap3/layout/inline_field.html'
+        form.helper.field_template = 'bootstrap3_transitional/layout/inline_field.html'
         form.helper.layout = Layout(
             'email',
             'password1',

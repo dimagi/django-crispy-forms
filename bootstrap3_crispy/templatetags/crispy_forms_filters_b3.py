@@ -11,7 +11,7 @@ from django import template
 from ..exceptions import CrispyError
 from ..utils import flatatt
 
-TEMPLATE_PACK = 'bootstrap3'
+TEMPLATE_PACK = 'bootstrap3_transitional'
 DEBUG = getattr(settings, 'DEBUG', False)
 
 
@@ -43,7 +43,7 @@ def as_crispy_form(form, template_pack=TEMPLATE_PACK, label_class="", field_clas
 
         {{ myform|crispy:"bootstrap" }}
 
-    In ``bootstrap3`` for horizontal forms you can do::
+    In ``bootstrap3_transitional`` for horizontal forms you can do::
 
         {{ myform|label_class:"col-lg-2",field_class:"col-lg-8" }}
     """

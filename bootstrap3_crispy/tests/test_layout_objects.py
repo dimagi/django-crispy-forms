@@ -81,7 +81,7 @@ class TestLayoutObjects(CrispyTestCase):
         html = render_crispy_form(form)
         if self.current_template_pack == 'bootstrap':
             self.assertEqual(html.count('class="control-group testing"'), 1)
-        elif self.current_template_pack == 'bootstrap3':
+        elif self.current_template_pack == 'bootstrap3_transitional':
             self.assertEqual(html.count('class="form-group testing"'), 1)
 
     def test_html_with_carriage_returns(self):
@@ -155,7 +155,7 @@ class TestBootstrapLayoutObjects(CrispyTestCase):
             self.assertEqual(html.count('<span class="add-on">#</span>'), 1)
             self.assertEqual(html.count('<span class="add-on">$</span>'), 1)
 
-        if self.current_template_pack == 'bootstrap3':
+        if self.current_template_pack == 'bootstrap3_transitional':
             self.assertEqual(html.count('<span class="input-group-addon">@</span>'), 1)
             self.assertEqual(html.count('<span class="input-group-addon">gmail.com</span>'), 1)
             self.assertEqual(html.count('<span class="input-group-addon">#</span>'), 1)
@@ -171,7 +171,7 @@ class TestBootstrapLayoutObjects(CrispyTestCase):
 
         if self.current_template_pack == 'bootstrap':
             self.assertEqual(html.count('radio inline"'), 2)
-        elif self.current_template_pack == 'bootstrap3':
+        elif self.current_template_pack == 'bootstrap3_transitional':
             self.assertEqual(html.count('radio-inline"'), 2)
 
     def test_accordion_and_accordiongroup(self):
@@ -320,7 +320,7 @@ class TestBootstrapLayoutObjects(CrispyTestCase):
         html = render_crispy_form(form)
 
         form_group_class = 'control-group'
-        if self.current_template_pack == 'bootstrap3':
+        if self.current_template_pack == 'bootstrap3_transitional':
             form_group_class = 'form-group'
 
         self.assertEqual(html.count('class="%s extra"' % form_group_class), 1)
@@ -337,7 +337,7 @@ class TestBootstrapLayoutObjects(CrispyTestCase):
 
         if self.current_template_pack == 'bootstrap':
             self.assertEqual(html.count('class="input-append"'), 1)
-        elif self.current_template_pack == 'bootstrap3':
+        elif self.current_template_pack == 'bootstrap3_transitional':
             self.assertEqual(html.count('class="input-group-btn'), 1)
 
         # Make sure white spaces between buttons are there in bootstrap
@@ -375,6 +375,6 @@ class TestBootstrapLayoutObjects(CrispyTestCase):
         if self.current_template_pack == 'bootstrap':
             self.assertEqual(html.count('checkbox inline"'), 3)
             self.assertEqual(html.count('inline"'), 3)
-        elif self.current_template_pack == 'bootstrap3':
+        elif self.current_template_pack == 'bootstrap3_transitional':
             self.assertEqual(html.count('checkbox-inline"'), 3)
             self.assertEqual(html.count('inline="True"'), 4)
