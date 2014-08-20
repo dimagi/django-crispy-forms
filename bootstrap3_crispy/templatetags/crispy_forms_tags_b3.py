@@ -8,7 +8,7 @@ from django.template.loader import get_template
 from django.utils.functional import memoize
 from django import template
 
-from bootstrap3_crispy.bootstrap3_crispy.helper import FormHelper
+from bootstrap3_crispy.helper import FormHelper
 
 register = template.Library()
 # We import the filters, so they are available when doing load crispy_forms_tags
