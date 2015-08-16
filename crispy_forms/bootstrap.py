@@ -19,7 +19,7 @@ class PrependedAppendedText(Field):
         self.prepended_text = prepended_text
         self.template = kwargs.pop(
             'template',
-            "%s/layout/prepend_appended_text.html" % get_template_pack()
+            "%s/layout/prepended_appended_text.html" % get_template_pack()
         )
         if 'active' in kwargs:
             self.active = kwargs.pop('active')
