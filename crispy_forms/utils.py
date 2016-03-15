@@ -42,7 +42,7 @@ def get_template_pack():
 
 # By memoizeing we avoid loading the template every time render_field
 # is called without a template
-@lru_cache
+@lru_cache()
 def default_field_template(template_pack=None):
     template_pack = template_pack or get_template_pack()
     return get_template("%s/field.html" % template_pack)
