@@ -8,7 +8,7 @@ from django.forms.forms import BoundField
 from django.template import Context
 from django.template.loader import get_template
 from django.utils.html import conditional_escape
-from django.utils.functional import memoize
+from django.utils.lru_cache import lru_cache
 
 from .base import KeepContext
 from .compatibility import text_type, PY2
@@ -42,10 +42,10 @@ def get_template_pack():
 
 # By memoizeing we avoid loading the template every time render_field
 # is called without a template
+@lru_cache
 def default_field_template(template_pack=None):
     template_pack = template_pack or get_template_pack()
     return get_template("%s/field.html" % template_pack)
-default_field_template = memoize(default_field_template, {}, 1)
 
 
 def render_field(field, form, form_style, context, template=None, labelclass=None, layout_object=None, attrs=None, template_pack=None):
